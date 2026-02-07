@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>???</title>
+
+	<link rel="stylesheet" href="css/style.css">
+
+	<script defer src="data/bookmarks.js"></script>
+	<script defer src="data/config.js"></script>
+	<script defer src="js/templates.js"></script>
+	<script defer src="js/loadBookmarks.js"></script>
+	<script defer src="js/datetime.js"></script>
+	<script defer src="js/weather.js"></script> <script defer src="js/greet.js"></script>
+	<script defer src="js/dynamicTitle.js"></script>
+	<script defer src="js/search.js"></script>
+	<script defer src="js/focusSearchOnInit.js"></script>
+</head>
+<body>
+
+	<div id="search-overlay" class="hidden">
+		<div id="search-container">
+			<div class="search-bar">
+				<input type="text" id="search-input" placeholder="search..." autocomplete="off" spellcheck="false">
+			</div>
+		</div>
+	</div>
+
+	<header class="top-bar">
+		<div id="datetime">--:--:-- | --/--/--</div>
+		<div id="greet">hello, user</div>
+		<div id="weather">weather: ---, ----------</div>
+	</header>
+
+	<main>
+
+		<button id="search-button"><span>--- nerdpage navigator ---</span></button>
+
+		<div id="categories-wrapper">
+			<div class="category" style="--accent-color: #BBFFB3">
+				<div class="category-label">> let <span>test</span> = </div>
+				<div class="links">
+					<span class="bracket">[</span>
+					<a href="#">If</a>
+					<a href="#">you</a>
+					<a href="#">see</a>
+					<a href="#">this</a>
+					<a href="#">message</a>
+					<a href="#">my</a>
+					<a href="#">code</a>
+					<a href="#">is</a>
+					<a href="#">ass</a>
+					<span class="bracket">]</span>
+				</div>
+			</div>
+
+			<div class="category" style="--accent-color: #FFB3B3">
+				<div class="category-label">> let <span>fallback_btw</span> = </div>
+				<div class="links">
+					<span class="bracket">[</span>
+					<span class="bracket">]</span>
+				</div>
+			</div>
+		</div>
+
+	</main>
+
+</body>
+</html>
+	

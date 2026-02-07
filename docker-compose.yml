@@ -1,0 +1,14 @@
+services:
+  nerdpage:
+    image: nginx:alpine
+    container_name: nerdpage
+    restart: always
+    ports:
+      - "8000:80"
+    volumes:
+      - ./nerdpage-files:/usr/share/nginx/html:ro
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+
