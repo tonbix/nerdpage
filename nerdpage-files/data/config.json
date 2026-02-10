@@ -1,0 +1,23 @@
+{
+	"USERNAME": "tonbix",
+
+	"LOCATION": {
+		"lat": 55.7178698,
+		"lon": 37.7476296
+	},
+
+	"DYNAMIC_TITLE_FRAMES": [
+		"o.o",
+		"o.o",
+		"o.o",
+		"o.o",
+		"o.o",
+		"o.o",
+		"o.o",
+		"o.o",
+		"o.o",
+		"~.~"
+	],
+
+	"SEARCH_ENGINE": "https://duckduckgo.com/&q="
+}

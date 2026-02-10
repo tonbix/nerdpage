@@ -1,41 +1,34 @@
 "use strict";
 
+import bookmarks from "../data/bookmarks.json" with { type: "json" };
 
-const validateUrl = (url) => {
-	if (!url || typeof url !== 'string') return null;
-    
-    const trimmed = url.trim();
+const categoryTpl = (name, bookmarks, color) => `
+<div class="category" style="--accent-color: ${color}">
+	<div class="category-label">> let <span>${name}</span> = </div>
+	<div class="links">
+		<span class="bracket">[</span>
+		${bookmarks}
+		<span class="bracket">]</span>
+	</div>
+</div>
+`
 
-    try {
-        const parsed = new URL(trimmed);
-        return parsed.href; 
-    } catch (_) { }
-
-    const domainRegex = /^[a-z0-9.-]+\.[a-z0-9]{2,}$/i;
-    
-    if (domainRegex.test(trimmed) && !trimmed.includes(' ')) {
-        return `https://${trimmed}`;
-    }
-
-    return null;
-}
+const bookmarkTpl = (url, label) => `<a href="${url}">${label}</a>`
 
 
 document.addEventListener("DOMContentLoaded", () => {
 	const categoriesWrapper = document.getElementById("categories-wrapper");
 
-	if (typeof(BOOKMARKS) === "undefined") {
+	if (typeof(bookmarks) === "undefined") {
 		console.error("Error: no config.");
 		categoriesWrapper.innerHTML = "Error: no config.";
 		return;
 	}
 
 	const render = () => {
-		const fullHtml = Object.entries(BOOKMARKS).map(([categoryName, categoryData]) => {
+		const fullHtml = Object.entries(bookmarks).map(([categoryName, categoryData]) => {
 			const bookmarksHtml = categoryData.bookmarks.map(bookmark => {
-				const validUrl = validateUrl(bookmark.url);
-
-				return validUrl ? bookmarkTpl(validUrl, bookmark.name) : "";
+				return bookmark.url ? bookmarkTpl(validateUrl(bookmark.url), bookmark.name) : "";
 			}).join(" ");
 
 			const accentColor = `hsl(${categoryData.hue}, 100%, 85%)`;
