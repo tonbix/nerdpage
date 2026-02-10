@@ -1,5 +1,6 @@
 "use strict";
 
+import settings from "../data/settings.json" with { type: "json" };
 
 const greetings = {
 	"universal": [ "hi", "hiiii", "hello", "yo", "whats up", "you cannot hide", "HEEELLOOOOOO", "HIIIIIIII"],
@@ -28,6 +29,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 	const greeting = matchingGreetings[Math.floor(Math.random() * matchingGreetings.length)];
 
-	greetElement.textContent = `${greeting}, ${USERNAME}`;
+	greetElement.textContent = `${greeting}, ${settings.username}`;
 });
 

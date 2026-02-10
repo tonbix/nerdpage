@@ -1,6 +1,6 @@
 "use strict";
 
-import bookmarks from "../data/bookmarks.json" with { type: "json" };
+import { validateUrl } from "./validateUrl.js";
 
 const categoryTpl = (name, bookmarks, color) => `
 <div class="category" style="--accent-color: ${color}">
@@ -12,12 +12,13 @@ const categoryTpl = (name, bookmarks, color) => `
 	</div>
 </div>
 `
-
 const bookmarkTpl = (url, label) => `<a href="${url}">${label}</a>`
 
 
 document.addEventListener("DOMContentLoaded", () => {
 	const categoriesWrapper = document.getElementById("categories-wrapper");
+
+	const bookmarks = JSON.parse(localStorage.getItem("nerdpage-bookmarks"));
 
 	if (typeof(bookmarks) === "undefined") {
 		console.error("Error: no config.");
@@ -28,7 +29,8 @@ document.addEventListener("DOMContentLoaded", () => {
 	const render = () => {
 		const fullHtml = Object.entries(bookmarks).map(([categoryName, categoryData]) => {
 			const bookmarksHtml = categoryData.bookmarks.map(bookmark => {
-				return bookmark.url ? bookmarkTpl(validateUrl(bookmark.url), bookmark.name) : "";
+				const validUrl = validateUrl(bookmark.url);
+				return validUrl ? bookmarkTpl(validUrl, bookmark.name) : "";
 			}).join(" ");
 
 			const accentColor = `hsl(${categoryData.hue}, 100%, 85%)`;

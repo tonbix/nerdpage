@@ -1,12 +1,14 @@
 "use strict";
 
+import settings from "../data/settings.json" with { type: "json" };
+
 let dynamicTitleCounter = 0;
 
 
 const updateTitle = () => {
-	dynamicTitleCounter = (dynamicTitleCounter + 1) % DYNAMIC_TITLE_FRAMES.length;
+	dynamicTitleCounter = (dynamicTitleCounter + 1) % settings.dynamicTitleFrames.length;
 
-	document.title = DYNAMIC_TITLE_FRAMES[dynamicTitleCounter];
+	document.title = settings.dynamicTitleFrames[dynamicTitleCounter];
 }
 
 

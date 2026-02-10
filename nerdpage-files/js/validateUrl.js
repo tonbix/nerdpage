@@ -3,7 +3,7 @@
 const URL_REGEX = /^(?<protocol>https?:\/\/)?(?:(?<domain>(?<www>www\.)?(?<xld>(?:[0-9a-zA-Zа-яёА-ЯЁ-]{1,253}\.)+)(?<tld>[a-zA-Zа-яёА-ЯЁ-]{2,64}))|(?<ip>(?:\d{1,3}\.){3}\d{1,3})|(?<custom>(?:localhost|lh)))(?<port>:[0-9]{1,5})?(?<path>\/.*)?$/;
 
 
-const validateUrl = (rawUrl) => {
+export const validateUrl = (rawUrl) => {
 	const trimmedRawUrl = ( rawUrl || "" ).trim();
 	if (!trimmedRawUrl) return null;
 

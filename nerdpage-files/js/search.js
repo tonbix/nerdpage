@@ -1,5 +1,6 @@
 "use strict";
 
+import settings from "../data/settings.json" with { type: "json" };
 
 const closeOverlay = (overlayEl, inputEl) => {
 	overlayEl.classList.add("hidden");
@@ -33,7 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
 			if (e.key == "Enter") {
 				e.preventDefault();
 
-				const searchUrl = SEARCH_ENGINE + searchInputElement.value;
+				const searchUrl = settings.searchEngine + searchInputElement.value;
 
 				window.location.replace(searchUrl);
 			}

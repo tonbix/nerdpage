@@ -1,5 +1,7 @@
 "use strict";
 
+import settings from "../data/settings.json" with { type: "json" };
+
 const WEATHER_CODES = {
     0: "SUNNY",
     1: "MAINLY CLEAR", 2: "PARTLY CLOUDY", 3: "OVERCAST",
@@ -41,7 +43,7 @@ const updateWeather = async () => {
 	const weatherElement = document.getElementById("weather");
 
 	try {
-		const url = `https://api.open-meteo.com/v1/forecast?latitude=${LOCATION.lat}&longitude=${LOCATION.lon}&current_weather=true`;
+		const url = `https://api.open-meteo.com/v1/forecast?latitude=${settings.location.lat}&longitude=${settings.location.lon}&current_weather=true`;
 
 		const response = await fetch(url);
 		if (!response.ok) throw new Error("no internet connection");
