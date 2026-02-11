@@ -13,14 +13,22 @@
 	<script type="module" src="js/datetime.js"></script>
 	<script type="module" src="js/greet.js"></script>
 	<script type="module" src="js/weather.js"></script>
-	<script type="module" src="js/search.js"></script>
+	<script type="module" src="js/configure.js"></script>
 </head>
 <body>
 
-	<div id="search-overlay" class="hidden">
-		<div id="search-container">
-			<div class="search-bar">
-				<input type="text" id="search-input" placeholder="search..." autocomplete="off" spellcheck="false">
+	<div id="configure-overlay" class="hidden">
+		<div id="configure-container">
+			<div class="configure-bar">
+				<input type="text" id="configure-input" placeholder="configure..." autocomplete="off" spellcheck="false">
+			</div>
+			<div class="configure-actions">
+				<a id="action-import">import</a>
+				<a id="action-export">export</a>
+				<a id="action-create-modify-bookmark">create/modify (bookmark)</a>
+				<a id="action-create-modify-category">create/modify (category)</a>
+				<a id="action-remove-bookmark">remove (bookmark)</a>
+				<a id="action-remove-category">remove (category)</a>
 			</div>
 		</div>
 	</div>
@@ -28,12 +36,12 @@
 	<header class="top-bar">
 		<div id="datetime">--:--:-- | --/--/--</div>
 		<div id="greet">hello, user</div>
-		<div id="weather">weather: ---, ----------</div>
+		<div id="weather">weather: ---, ------ -----</div>
 	</header>
 
 	<main>
 
-		<button id="search-button"><span>--- nerdpage navigator ---</span></button>
+		<button id="configure-button"><span>--- configure nerdpage ---</span></button>
 
 		<div id="categories-wrapper">
 			<div class="category" style="--accent-color: #BBFFB3">

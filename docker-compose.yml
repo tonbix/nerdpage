@@ -4,7 +4,7 @@ services:
     container_name: nerdpage
     restart: always
     ports:
-      - "8000:80"
+      - "2007:80"
     volumes:
       - ./nerdpage-files:/usr/share/nginx/html:ro
     logging:

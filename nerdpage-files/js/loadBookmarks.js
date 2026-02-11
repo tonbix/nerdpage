@@ -20,9 +20,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
 	const bookmarks = JSON.parse(localStorage.getItem("nerdpage-bookmarks"));
 
-	if (typeof(bookmarks) === "undefined") {
+	if (!bookmarks) {
 		console.error("Error: no config.");
-		categoriesWrapper.innerHTML = "Error: no config.";
+		const setupBookmarks = bookmarkTpl("", "add") + " " + bookmarkTpl("", "import");
+		categoriesWrapper.innerHTML = categoryTpl("configure?", setupBookmarks, "hsl(160, 100%, 85%)");
+
 		return;
 	}
 

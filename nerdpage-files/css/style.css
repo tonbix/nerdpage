@@ -89,7 +89,7 @@ main {
 	color: var(--bg-color);
 }
 
-#search-button {
+#configure-button {
 	grid-row: 99;
 	align-items: center;
 	width: 100%;
@@ -98,12 +98,12 @@ main {
 	opacity: 0.1;
 }
 
-#search-button:hover {
+#configure-button:hover {
 	opacity: 0.2;
 }
 
 
-#search-overlay {
+#configure-overlay {
 	position: fixed;
 	inset: 0;
 	background: color-mix(in srgb, var(--bg-color), transparent 15%);
@@ -114,21 +114,37 @@ main {
 	z-index: 99;
 }
 
-#search-container {
+#configure-container {
 	max-width: 900px;
 	width: 80%;
 	background: transparent;
-	border: 1px solid color-mix(in srgb, var(--fg-color), transparent 95%);
 }
 
-.search-bar {
+.configure-bar {
 	display: flex;
 	align-items: center;
-	padding: 5px;
+	padding: 8px;
 	outline: none;
+	border: 1px solid color-mix(in srgb, var(--fg-color), transparent 90%);
 }
 
-#search-input {
+.configure-actions {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding-top: 16px;
+}
+
+.configure-actions > * {
+	width: 100%;
+	color: color-mix(in srgb, var(--fg-color), transparent 90%);
+}
+
+.configure-actions > a:first-child {
+	color: color-mix(in srgb, var(--fg-color), transparent 75%);
+}
+
+#configure-input {
 	flex: 1;
 	border: none;
 	outline: none;
@@ -137,30 +153,9 @@ main {
 	text-align: center;
 }
 
-#search-input::placeholder {
+#configure-input::placeholder {
 	color: color-mix(in srgb, var(--fg-color), transparent 90%);
 }
-
-/*
-#search-results {
-	max-height: 400px;
-	overflow-y: auto;
-}
-
-.result-item {
-	padding: 12px 15px;
-	cursor: pointer;
-	display: flex;
-	justify-content: space-between;
-}
-
-.result-item:hover, .result-item.selected {
-	background: color-mix(in srgb, var(--fg-color), transparent 90%);
-}
-
-.result-item .alias { color: var(--fg-color); background: transparent; }
-.result-item .url { opacity: 0.4; font-size: 1rem; background: transparent; }
-*/
 
 .hidden { display: none !important; }
 
