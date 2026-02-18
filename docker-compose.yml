@@ -5,6 +5,7 @@ services:
     restart: always
     ports:
       - "2007:80"
+    network_mode: bridge
     volumes:
       - ./nerdpage-files:/usr/share/nginx/html:ro
     logging:

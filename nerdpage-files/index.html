@@ -7,32 +7,13 @@
 
 	<link rel="stylesheet" href="css/style.css">
 
-	<script type="module" src="js/focusSearchOnInit.js"></script>
 	<script type="module" src="js/dynamicTitle.js"></script>
 	<script type="module" src="js/loadBookmarks.js"></script>
 	<script type="module" src="js/datetime.js"></script>
 	<script type="module" src="js/greet.js"></script>
 	<script type="module" src="js/weather.js"></script>
-	<script type="module" src="js/configure.js"></script>
 </head>
 <body>
-
-	<div id="configure-overlay" class="hidden">
-		<div id="configure-container">
-			<div class="configure-bar">
-				<input type="text" id="configure-input" placeholder="configure..." autocomplete="off" spellcheck="false">
-			</div>
-			<div class="configure-actions">
-				<a id="action-import">import</a>
-				<a id="action-export">export</a>
-				<a id="action-create-modify-bookmark">create/modify (bookmark)</a>
-				<a id="action-create-modify-category">create/modify (category)</a>
-				<a id="action-remove-bookmark">remove (bookmark)</a>
-				<a id="action-remove-category">remove (category)</a>
-			</div>
-		</div>
-	</div>
-
 	<header class="top-bar">
 		<div id="datetime">--:--:-- | --/--/--</div>
 		<div id="greet">hello, user</div>
@@ -40,35 +21,15 @@
 	</header>
 
 	<main>
+		<footer>
+			<!-- I know how bad it is. And i absolutely don't care. This repo stays for my own startpage and I have more valuable tasks to spend time on. I can rename this from footer to configuration-container f.e. and htm gonna look a bit better, but I do not fucking care at all -->
+			<button id="visual-configuration">[ interactive configuration ]</button>
+			<button id="export-configuration-button">[ export configuration ]</button>
+			<button id="import-configuration-button">[ import configuration ]</button>
+			<button id="reset-configuration-button">[ reset configuration ]</button>
+		</footer>
 
-		<button id="configure-button"><span>--- configure nerdpage ---</span></button>
-
-		<div id="categories-wrapper">
-			<div class="category" style="--accent-color: #BBFFB3">
-				<div class="category-label">> let <span>test</span> = </div>
-				<div class="links">
-					<span class="bracket">[</span>
-					<a href="#">If</a>
-					<a href="#">you</a>
-					<a href="#">see</a>
-					<a href="#">this</a>
-					<a href="#">message</a>
-					<a href="#">my</a>
-					<a href="#">code</a>
-					<a href="#">is</a>
-					<a href="#">ass</a>
-					<span class="bracket">]</span>
-				</div>
-			</div>
-
-			<div class="category" style="--accent-color: #FFB3B3">
-				<div class="category-label">> let <span>fallback_btw</span> = </div>
-				<div class="links">
-					<span class="bracket">[</span>
-					<span class="bracket">]</span>
-				</div>
-			</div>
-		</div>
+		<div id="categories-wrapper"></div>
 
 	</main>
 

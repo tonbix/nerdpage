@@ -3,7 +3,7 @@
 import settings from "../data/settings.json" with { type: "json" };
 
 const greetings = {
-	"universal": [ "hi", "hiiii", "hello", "yo", "whats up", "you cannot hide", "HEEELLOOOOOO", "HIIIIIIII"],
+	"universal": [ "hi", "hiiii", "hello", "yo", "whats up", "you cannot hide", "HEEELLOOOOOO", "HIIIIIIII" ],
 	"night": [ "good night", "gn", "gute nacht", "buona notte", "gpod nigjt" ],
 	"morning": [ "good morning", "gm", "guten morgen", "buongiorno", "good mornign" ],
 	"afternoon": [ "good afternoon", "ga", "guten tag", "buon pomeriggio", "goid adternoon" ],
