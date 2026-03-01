@@ -1,17 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en_US">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>???</title>
 
-	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="src/css/style.css">
+	<link rel="stylesheet" href="src/css/toast.css">
 
-	<script type="module" src="js/dynamicTitle.js"></script>
-	<script type="module" src="js/loadBookmarks.js"></script>
-	<script type="module" src="js/datetime.js"></script>
-	<script type="module" src="js/greet.js"></script>
-	<script type="module" src="js/weather.js"></script>
+	<script type="module" src="src/js/dynamicTitle.js"></script>
+	<script type="module" src="src/js/loadBookmarks.js"></script>
+	<script type="module" src="src/js/datetime.js"></script>
+	<script type="module" src="src/js/greet.js"></script>
+	<script type="module" src="src/js/weather.js"></script>
 </head>
 <body>
 	<header class="top-bar">
@@ -20,9 +21,14 @@
 		<div id="weather">weather: ---, ------ -----</div>
 	</header>
 
+	<div class="toast">
+		<p style="background-color: #aaffaa77; color: #aaffaaff"}>success</p>
+		<p style="background-color: #ffaaaa77; color: #ffaaaaff"}>error</p>
+	</div>
+
 	<main>
 		<footer>
-			<!-- I know how bad it is. And i absolutely don't care. This repo stays for my own startpage and I have more valuable tasks to spend time on. I can rename this from footer to configuration-container f.e. and htm gonna look a bit better, but I do not fucking care at all -->
+			<!-- I know how bad it is. And i absolutely don't care. This repo stays for _my_ own startpage and I have more valuable tasks to spend time on rather than fixing logic of html file. Anyways this element ACTUALLY moved to the bottom with styles, sooooooo... And yes, I can rename this from footer to configuration-container f.e. and htm gonna look a bit better, but I do not fucking care at all -->
 			<button id="visual-configuration">[ interactive configuration ]</button>
 			<button id="export-configuration-button">[ export configuration ]</button>
 			<button id="import-configuration-button">[ import configuration ]</button>

@@ -1,6 +1,6 @@
 "use strict";
 
-import settings from "../data/settings.json" with { type: "json" };
+import settings from "../../data/settings.json" with { type: "json" };
 
 const WEATHER_CODES = {
     0: "SUNNY",

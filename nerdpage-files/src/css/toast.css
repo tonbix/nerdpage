@@ -1,0 +1,15 @@
+.toast {
+	position: fixed;
+	bottom: 16px;
+	width: 100%;
+}
+
+.toast p {
+	--accent-color: white;
+	width: min-content;
+	margin: 0 auto;
+	color: black;
+	background: white;
+	text-align: center;
+	text-wrap: nowrap;
+}
