@@ -5,11 +5,28 @@
 }
 
 .toast p {
-	--accent-color: white;
-	width: min-content;
+	position: relative;
+	width: fit-content;
+	max-width: 90%;
+	padding: 0 4px;
 	margin: 0 auto;
-	color: black;
-	background: white;
+	margin-bottom: 8px;
+	color: var(--accent-color);
+	background-color: color-mix(in srgb, var(--accent-color), transparent 50%);
 	text-align: center;
-	text-wrap: nowrap;
+	text-wrap: wrap;
+	animation-name: slide-in;
+	animation-duration: 0.5s;
 }
+
+@keyframes slide-in {
+	from {
+		transform: translateY(32px);
+		opacity: 0;
+	}
+	to {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+

@@ -10,9 +10,10 @@
 
 	<script type="module" src="src/js/dynamicTitle.js"></script>
 	<script type="module" src="src/js/loadBookmarks.js"></script>
-	<script type="module" src="src/js/datetime.js"></script>
-	<script type="module" src="src/js/greet.js"></script>
-	<script type="module" src="src/js/weather.js"></script>
+	<script type="module" src="src/js/widget/datetime.js"></script>
+	<script type="module" src="src/js/widget/greet.js"></script>
+	<script type="module" src="src/js/widget/weather.js"></script>
+	<script type="module" src="src/js/toast/spawnToastMessage.js"></script>
 </head>
 <body>
 	<header class="top-bar">
@@ -21,10 +22,7 @@
 		<div id="weather">weather: ---, ------ -----</div>
 	</header>
 
-	<div class="toast">
-		<p style="background-color: #aaffaa77; color: #aaffaaff"}>success</p>
-		<p style="background-color: #ffaaaa77; color: #ffaaaaff"}>error</p>
-	</div>
+	<div id="toasts-wrapper" class="toast"></div>
 
 	<main>
 		<footer>

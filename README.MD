@@ -3,12 +3,15 @@
 lightweight retro-style and tridactyl-oriented start page 
 
 ### TO-DO:
-- [ ] rewrite to use localstorage instead of a bunch of .js files
-- [ ] navigator should only send the user to search if they do not enter url
-- [ ] command support for navigator
-- - [ ] to add bookmark
-- - [ ] to remove bookmark
-- - [ ] to modify bookmark
-- - [ ] to add category
-- - [ ] to remove category
-- - [ ] to modify category
+- [x] rewrite to use localstorage instead of a bunch of .js files
+- [ ] interactive configuration
+- - [ ] drag'n'drop
+- - [ ] rename on click
+- - [ ] add bookmark
+- - [ ] add category
+- - [ ] remove bookmark
+- - [ ] remove category
+- [ ] non interactive configuration
+- - [ ] export configuration
+- - [ ] import configuration
+- - [ ] reset configuration
