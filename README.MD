@@ -12,6 +12,6 @@ lightweight retro-style and tridactyl-oriented start page
 - - [ ] remove bookmark
 - - [ ] remove category
 - [ ] non interactive configuration
-- - [ ] export configuration
+- - [x] export configuration
 - - [ ] import configuration
 - - [ ] reset configuration
