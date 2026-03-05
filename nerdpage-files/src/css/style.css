@@ -106,3 +106,6 @@ footer button:hover {
 	opacity: 0.2;
 }
 
+.disabled {
+	display: none !important;
+}

@@ -17,6 +17,7 @@
 	text-wrap: wrap;
 	animation-name: slide-in;
 	animation-duration: 0.5s;
+	cursor: pointer;
 }
 
 @keyframes slide-in {
