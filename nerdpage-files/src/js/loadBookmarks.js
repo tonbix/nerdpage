@@ -14,8 +14,7 @@ const categoryTpl = (name, bookmarks, color) => `
 `
 const bookmarkTpl = (url, label) => `<a href="${url}">${label}</a>`
 
-
-document.addEventListener("DOMContentLoaded", () => {
+export const loadBookmarks = () => {
 	const categoriesWrapper = document.getElementById("categories-wrapper");
 
 	const bookmarks = JSON.parse(localStorage.getItem("nerdpage-bookmarks"));
@@ -44,4 +43,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	};
 
 	render();
-});
+}
+
+document.addEventListener("DOMContentLoaded", loadBookmarks);
+
