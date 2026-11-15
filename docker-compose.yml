@@ -1,0 +1,14 @@
+services:
+  nerdpage:
+    build: .
+    image: nerdpage:latest
+    container_name: nerdpage
+    restart: unless-stopped
+    ports:
+      - "2007:80"
+    network_mode: bridge
+    logging:
+      driver: "json-file"
+      options:
+        max_size: "10m"
+
